@@ -1,14 +1,14 @@
 environments:
   test:
 pipelines:
-  testPython1:
+  testPython1: #name of pipeline
     group: defaultGroup
     materials:
       mygit:
         git: https://github.com/JamiePines/gocd-test-1
         auto_update: false
     stages:
-      - defaultStage:
+      - defaultStage: #name of stage
           jobs:
             defaultJob:
               artifacts:
@@ -19,7 +19,8 @@ pipelines:
               tasks:
                 - exec:
                     command: \Python27\python.exe
-                    arguments: hello_world.py
+                    arguments: 
+                      - hello_world.py
                     run_if: passed
   testPython2:
     group: defaultGroup
@@ -44,6 +45,7 @@ pipelines:
                     run_if: passed
                 - exec:
                     command: \Python27\python.exe
-                    arguments: read_file_add_modified.py
+                    arguments: 
+                      - read_file_add_modified.py
                     run_if: passed
 
