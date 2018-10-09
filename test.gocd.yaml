@@ -4,7 +4,7 @@ pipelines:
   testPython1:
     group: defaultGroup
     materials:
-      https://github.com/JamiePines/gocd-test-1:
+      mygit:
         git: https://github.com/JamiePines/gocd-test-1
         auto_update: false
     stages:
@@ -27,7 +27,7 @@ pipelines:
       testPython1:
         pipeline: testPython1
         stage: defaultStage
-      https://github.com/JamiePines/gocd-test-1:
+      mygit:
         auto_update: false
         git: https://github.com/JamiePines/gocd-test-1
     stages:
