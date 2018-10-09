@@ -15,7 +15,7 @@ pipelines:
                 - build:
                     source: hello_world.txt
               tabs:
-                Hello_world: hello_world.txt
+                hello-world: hello_world.txt
                   tasks:
                     - exec:
                       run_if: passed
