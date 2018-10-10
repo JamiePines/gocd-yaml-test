@@ -35,6 +35,9 @@ pipelines:
       - defaultStage:
           jobs:
             defaultJob:
+              artifacts:
+                - build:
+                    source: hello_world_mod.txt
               tasks:
                 - fetch:
                     artifact_origin: gocd
