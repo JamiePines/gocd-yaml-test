@@ -42,6 +42,7 @@ pipelines:
                     pipeline: testPython1
                     stage: defaultStage
                     job: defaultJob
+                    is_file: yes
                     run_if: passed
                 - exec:
                     command: \Python27\python.exe
